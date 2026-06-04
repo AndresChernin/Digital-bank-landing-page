@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time tracking dashboard</title>
+    
+    <link rel="stylesheet" href="styles-for-upper-digitalbank-container.css">
+    <link rel="stylesheet" href="styles-for-main-container.css">
+    <link rel="stylesheet" href="styles-for-foto-part-container.css">
+    <link rel="stylesheet" href="styles-for-why-choose-container.css">
+    <link rel="stylesheet" href="styles-for-articles-container.css">
+    <link rel="stylesheet" href="styles-for-lower-digitalbank-container.css">  
+  
+    <link href=
+    "https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" 
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700;900&display=swap"
+ rel="stylesheet">
+    
+  </head>
+  <body>
+    
+    <div id="root"></div>
+    
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    
+    
+    <script src="UpperDigitalBank.jsx" type="text/babel"></script>
+    <script src="FotoComponent.jsx" type="text/babel"></script>
+    <script src="FotoComponent2.jsx" type="text/babel"></script>
+    <script src="WhyChooseComponent.jsx" type="text/babel"></script>
+    <script src="WhyChooseSection.jsx" type="text/babel"></script>
+    <script src="ArticleComponent.jsx" type="text/babel"></script>
+    <script src="ArticlesSection.jsx" type="text/babel"></script>
+    <script src="LowerDigitalBank.jsx" type="text/babel"></script>
+    
+    <script src="bankData.js"></script>
+    <script src="articlesData.js"></script>
+    <!--/*<script src="MiddleComponent.jsx" type="text/babel"></script>
+    <script src="LowerComponent.jsx" type="text/babel"></script>
+    <script src="SuccessComponent.jsx" type="text/babel"></script>
+    <script src="ValidationModel.mjs"></script>*/}-->
+    <script type="text/babel">
+      
+
+
+       function App(){
+
+        return(
+          <main className={"main-container"} >
+           <UpperDigitalBank logo_link="./images/logo-dark.svg"
+                             icon_link1="./images/icon-hamburger.svg"
+                             icon_link2="./images/icon-close.svg"/> 
+          <FotoComponent background_foto_mobile="./images/bg-intro-mobile.svg"
+                         background_foto_desktop="./images/bg-intro-desktop.svg"
+                         inner_foto_link="./images/image-mockups.png"/> 
+          <WhyChooseSection data={bankData}/>
+          <ArticlesSection data={articlesData}/>
+          <LowerDigitalBank logo_link="./images/logo-light.svg"
+                            icon1="./images/icon-facebook.svg"
+                            icon2="./images/icon-youtube.svg"
+                            icon3="./images/icon-twitter.svg" 
+                            icon4="./images/icon-pinterest.svg"
+                            icon5="./images/icon-instagram.svg" />  
+          </main>
+         )      
+         
+       }
+      const container = document.querySelector('#root');
+      ReactDOM.createRoot(container).render(<App />);
+    </script>
+  </body>
+</html>

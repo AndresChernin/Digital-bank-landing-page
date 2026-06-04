@@ -1,0 +1,100 @@
+.lower-digital-bank-part{
+    width:100%;
+    box-sizing: border-box;
+    background-color: var(--container-blue-color);
+    padding:3rem;
+    padding-bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.lower-digital-bank-inner-part{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:2rem;
+}
+.lower-bank-inner-part-digi-part{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+}
+.lower-bank-icons-part{
+    display:flex;
+    justify-content: space-between;
+}
+.lower-bank-info-part{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.lower-bank-info-upper-part{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.lower-bank-info-lower-part{
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+.lower-bank-info-part p{
+    color:white;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: center;
+}
+.button-container{
+    padding-left:1.5rem;
+    padding-right:1.5rem;
+    padding-top:0.5rem;
+    padding-bottom: 0.5rem;
+    border:none;
+    border-radius: 25px;
+     background: linear-gradient(
+        45deg,
+        hsl(192, 69%, 51%),
+        hsl(136, 64%, 51%)
+    );
+}
+.lower-bank-button-part{
+  display:flex;
+  flex-direction: column;
+  align-items: center;  
+  gap:1rem; 
+}
+.footer-part{
+    font-size: 13px;
+    font-weight: 400;
+}
+@media(min-width:700px){
+    .lower-digital-bank-part{
+      padding-left:5rem;
+      padding-right:5rem;
+      gap:3rem;
+    }
+ .lower-digital-bank-inner-part{
+    
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:0;
+}
+.lower-bank-info-part{
+    display:flex;
+    flex-direction: row;
+    gap:10vw;
+}
+.lower-bank-button-part{
+ 
+  align-items:flex-end ;
+  justify-content: space-between;
+}
+.lower-bank-info-part p{
+    
+    text-align: left
+}
+ 
+}

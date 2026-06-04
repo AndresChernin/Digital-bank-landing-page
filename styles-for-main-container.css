@@ -1,0 +1,56 @@
+:root{
+    /*colors*/
+    --body-background-white-color:hsl(0, 100%, 100%);
+    --container-light-gray-color:hsl(0, 0%, 98%);
+    --container-gray-color:hsl(220, 16%, 96%);
+    --container-blue-color:hsl(233, 26%, 24%);
+    --h-color:hsl(220, 10%, 6%);
+    --p-color:hsl(233, 8%, 62%);
+    /*padding*/
+    --universall-padding-left-and-right:1.5rem;
+    --universall-padding-left-and-right-desktop:5rem;
+    --padding-top-for-why-choose-and-articles:2rem;
+    --padding-bottom-why-choose:2rem;
+    --padding-bottom-for-articles:4rem;
+    /*border radius*/
+    --border-radius:10px;
+}
+html,body{
+  margin:0;
+  padding:0;
+  min-height:100vh;
+  height:auto;
+  background-color: var(--body-background-white-color);
+  font-family: Public Sans;
+  
+}
+p,h1{
+  padding:0;
+  margin:0;
+  
+}
+h1,h2,h3{
+  color:var(--h-color);
+  font-weight: 300;
+}
+p{
+  color:var(--p-color);
+}
+#root{
+  min-height:100vh;
+  margin:0
+}
+.main-container{
+  width:100%;
+  box-sizing: border-box;
+  
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.button-part-p{
+  color:white;
+  font-weight: 700;
+}
