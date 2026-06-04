@@ -1,0 +1,80 @@
+.upper-digital-bank-part{
+    width:100%;
+    background-color: var(--body-background-white-color);
+    border:1px solid black;
+    box-sizing: border-box;
+    padding:var(--universall-padding-left-and-right);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+.upper-digital-bank-inner-part-mobile{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon-part1{
+    height:10px;
+    width: 25px;
+    cursor:pointer;
+}
+.icon-part2{
+    height:20px;
+    width: 20px;
+    cursor:pointer;
+}
+.upper-digital-bank-inner-part-desktop{
+    width: 100%;
+    display:none;
+}
+.upper-digital-bank-info-part{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap:1rem;
+}
+.upper-digital-bank-info-part p{
+    font-size: 12px;
+}
+.menu-part{
+    height:50vh;
+    width:25vw;
+    border-radius: 8px;
+    position:absolute;
+    top:120%;
+    left:50%;
+    z-index: 999;
+    transform: translateX(75%);
+    background-color: var(--container-gray-color);
+    display:flex;
+    border:2px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+}
+.menu-part p{
+    color:var(--h-color);
+
+}
+@media(min-width:900px){
+    .upper-digital-bank-part{
+        padding-left:var(--universall-padding-left-and-right-desktop);
+        padding-right:var(--universall-padding-left-and-right-desktop);
+    }
+    .upper-digital-bank-inner-part-mobile{
+        display:none;
+    }
+    .upper-digital-bank-inner-part-desktop{
+        display:flex;
+        justify-content: space-between;
+    }
+    .menu-part{
+        display:none;
+    }
+     
+
+}

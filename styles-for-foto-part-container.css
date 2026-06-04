@@ -1,0 +1,136 @@
+.foto-part{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    background: linear-gradient(
+        to bottom,
+         var(--container-light-gray-color) 0%,
+        var(--container-light-gray-color) 55%,
+        var(--body-background-white-color) 100%
+    );
+}
+.foto-part-upper-part{
+    width:100%;
+    position: relative;
+    overflow: hidden;
+    max-height:500px;
+    
+}
+.bg-foto-part{
+    width: 100%;
+    height:100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    
+    
+}
+.inner-foto-part{
+     width:85%;
+    
+
+    height:auto;
+    position:absolute;
+
+    top:-150px;
+    left:50%;
+    transform:translateX(-50%);
+    
+}
+.foto-part-lower-part{
+    width:100;
+    box-sizing: border-box;
+    padding-left:var(--universall-padding-left-and-right);
+    padding-right:var(--universall-padding-left-and-right);
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.foto-part-lower-part-inner-container{
+    padding-top:2rem;
+    padding-bottom: 2rem;
+    width:100%;
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+}
+.foto-part-h-part{
+    font-weight: 300;
+       
+}
+.foto-part-button-part{
+    padding-left:1.5rem;
+    padding-right:1.5rem;
+    padding-top:0.5rem;
+    padding-bottom: 0.5rem;
+    border:none;
+    border-radius: 25px;
+     background: linear-gradient(
+        45deg,
+        hsl(192, 69%, 51%),
+        hsl(136, 64%, 51%)
+    );
+}
+.mobile-hero{
+    width:100%;
+}
+.desktop-hero{
+    width:100%;
+    display:none;
+    border:1px solid red;
+}
+@media(min-width:700px){
+    .mobile-hero{
+        display:none;
+    }
+    .desktop-hero{
+        padding:0;
+        display:flex;
+        align-items: stretch;
+        position:relative;
+    }
+    .foto-part{
+        flex-direction: row-reverse;
+        padding-left:var(--universall-padding-left-and-right-desktop);
+        position:relative;
+    z-index:1;
+    }
+    .foto-part-upper-part{
+        height:auto;
+        overflow: hidden;
+    }
+    .foto-part-lower-part-inner-container{
+    
+    text-align: left;
+    
+    align-items: flex-start;
+    
+}
+.inner-foto-part{
+    width:85%;
+    
+    max-width: 600px;
+    height:auto;
+    position:absolute;
+
+    top:-150px;
+    left:70%;
+    transform:translateX(-50%);
+    z-index:3;
+}
+.bg-foto-part{
+    width:100%;
+    height:100%;
+    display:block;
+    object-fit:cover;
+}
+.foto-part-h-part{
+    width:15ch;
+}
+.foto-part-p-part{
+    width:25ch;
+}
+}
