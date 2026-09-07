@@ -6,15 +6,38 @@ function UpperDigitalBank({logo_link, icon_link1, icon_link2}){
              <div className="upper-digital-bank-inner-part-mobile">
                <img src={logo_link}  alt="image of logo"/>
              {!showMenu ?
-                   (<img src={icon_link1} 
+                   (
+                   <button className="open-menu-button"
+                   onClick={()=>setShowMenu(true)}>
+                     <span className="open-menu-icon"
+                       style={{
+                              maskImage: `url(${icon_link1})`,
+                              WebkitMaskImage: `url(${icon_link1})`
+                             }}>
+
+                    </span>
+                    {/*
+                   <img src={icon_link1} 
                         className="icon-part1"  
                         alt="image of icon"
-                        onClick={()=>setShowMenu(true)}/>
+                        />*/}
+                    </button>   
                    ):
-                   (<img src={icon_link2} 
+                   (<button className="close-menu-button"
+                     onClick={()=>setShowMenu(false)}>
+                      <span className="close-menu-icon"
+                       style={{
+                              maskImage: `url(${icon_link2})`,
+                              WebkitMaskImage: `url(${icon_link2})`
+                             }}>
+
+                    </span>
+                    {/*  
+                   <img src={icon_link2} 
                          className="icon-part2"  
                          alt="image of icon"
-                         onClick={()=>setShowMenu(false)}/>
+                         />*/}
+                    </button>
                    )
               }
              </div>

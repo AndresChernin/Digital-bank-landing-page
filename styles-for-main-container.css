@@ -6,6 +6,9 @@
     --container-blue-color:hsl(233, 26%, 24%);
     --h-color:hsl(220, 10%, 6%);
     --p-color:hsl(233, 8%, 62%);
+    --gray-color:#23253a;
+    --black-color:#08080d;
+    --green-color:#2AB6D9;
     /*padding*/
     --universall-padding-left-and-right:1.5rem;
     --universall-padding-left-and-right-desktop:5rem;
