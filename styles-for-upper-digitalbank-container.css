@@ -73,16 +73,7 @@
     background-color: var(--green-color);
 }
 
-.icon-part1{
-    height:100%;
-    width: 100%;
-    cursor:pointer;
-}
-.icon-part2{
-    height:20px;
-    width: 20px;
-    cursor:pointer;
-}
+
 .upper-digital-bank-inner-part-desktop{
     width: 100%;
     display:none;
