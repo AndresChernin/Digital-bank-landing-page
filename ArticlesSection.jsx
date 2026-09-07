@@ -6,10 +6,10 @@ function ArticlesSection({data}){
                 {data.map(
                     (element, index) => (<ArticleComponent
                                          key={index}
-                                         img_link={element.img_link}
-                                         p_autor={element.p_autor}
-                                         p_title={element.p_title}
-                                         p_text={element.p_text}
+                                         image={element.img_link}
+                                         autor={element.p_autor}
+                                         title={element.p_title}
+                                         text={element.p_text}
                                          />  
                     ))
                 }

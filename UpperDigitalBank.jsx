@@ -62,9 +62,9 @@ function UpperDigitalBank({logo_link, icon_link1, icon_link2}){
                 <p>Blog</p>
                 <p>Careeres</p>
                </div>
-               <button className="button-container">
-                 <p className="button-part-p">Request Invite</p>
-                </button>
+               <button className="upper-request-button">
+                      Request Invite
+              </button>
            </div> 
          
         </article>

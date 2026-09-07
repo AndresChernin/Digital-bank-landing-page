@@ -108,6 +108,25 @@
     color:var(--h-color);
 
 }
+.upper-request-button {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(
+        45deg,
+        hsl(192, 69%, 51%),
+        hsl(136, 64%, 51%)
+    );
+    cursor: pointer;
+}
+.upper-request-button:hover{
+  background: linear-gradient(
+        45deg,
+        hsl(192, 67%, 27%),
+        hsl(136, 61%, 31%)
+    ); 
+    color:white; 
+}
 @media(min-width:900px){
     .upper-digital-bank-part{
         padding-left:var(--universall-padding-left-and-right-desktop);
