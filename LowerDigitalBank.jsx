@@ -25,8 +25,8 @@ function LowerDigitalBank({logo_link,icon1,icon2,icon3,icon4,icon5}){
                   </div>
               </div>
               <div className="lower-bank-button-part">
-                <button className="button-container">
-                 <p className="button-part-p">Request Invite</p>
+                <button className="request-button">
+                  Request Invite   
                 </button>
                 <p className="footer-part">© Digitalbank. All Rights Reserved</p>
               </div>
