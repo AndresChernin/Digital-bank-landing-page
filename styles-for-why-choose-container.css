@@ -3,7 +3,7 @@
     box-sizing: border-box;
     background-color: var(--container-gray-color);
     padding-top:var(--padding-top-for-why-choose-and-articles);
-    padding-bottom: var(--padding-bottom-why-choose-and-articles);
+    padding-bottom: var(--padding-bottom-why-choose);
     padding-left: var(--universall-padding-left-and-right);
     padding-right:var(--universall-padding-left-and-right);
     gap:1rem;
