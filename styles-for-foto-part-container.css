@@ -80,7 +80,7 @@
 .desktop-hero{
     width:100%;
     display:none;
-    border:1px solid red;
+    
 }
 @media(min-width:700px){
     .mobile-hero{
