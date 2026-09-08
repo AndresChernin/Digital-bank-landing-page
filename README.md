@@ -1,105 +1,178 @@
-# Frontend Mentor - Digitalbank landing page
+Digitalbank Landing Page
+Overview
 
-![Design preview for the Digitalbank landing page coding challenge](preview.jpg)
+This project is a responsive landing page for a fictional digital banking service called Digitalbank.
 
-## Welcome! 👋
+The page was built as a Frontend Mentor challenge and implemented with React, JavaScript, HTML, and CSS. The main focus of the project was to recreate the provided design while practicing responsive layouts, component-based development, mobile navigation, and accessibility.
 
-Thanks for checking out this front-end coding challenge.
+The page includes a responsive navigation, a hero section, information about the benefits of Digitalbank, a latest articles section, and a footer with additional navigation and social media links.
+Built with
+HTML5
+CSS3
+JavaScript
+React
+JSX
+Responsive design
+CSS Flexbox
+CSS Media Queries
+React useState
+React useRef
+React useEffect
+Features
+Responsive landing page for desktop and mobile devices
+Mobile navigation menu with open and close states
+Desktop navigation
+Responsive hero section
+Reusable React components
+Article cards generated from JavaScript data
+Responsive layout using CSS media queries
+Hover and focus states for interactive elements
+Semantic HTML structure
+Accessible navigation buttons
+Focus management when closing the mobile navigation
+Project Structure
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+The project is organized into separate components, data files, and stylesheets.
 
-**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**
+src/
+├── components/
+│   ├── UpperDigitalBank.jsx
+│   ├── FotoComponent.jsx
+│   ├── WhyChooseComponent.jsx
+│   ├── WhyChooseSection.jsx
+│   ├── ArticleComponent.jsx
+│   ├── ArticlesSection.jsx
+│   └── LowerDigitalBank.jsx
+│
+├── data/
+│   ├── bankData.js
+│   └── articlesData.js
+│
+└── styles/
+    ├── styles-for-upper-digitalbank-container.css
+    ├── styles-for-lower-digitalbank-container.css
+    ├── styles-for-main-container.css
+    ├── styles-for-foto-part-container.css
+    ├── styles-for-why-choose-container.css
+    └── styles-for-articles-container.css
+Implementation
+React Components
 
-## The challenge
+The landing page is divided into smaller React components instead of implementing the entire page in one component.
 
-Your challenge is to build out this landing page and get it looking as close to the design as possible.
+For example, the article section receives its data through props and creates the article cards with map():
 
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+{data.map((element, index) => (
+    <ArticleComponent
+        key={index}
+        image={element.img_link}
+        autor={element.p_autor}
+        title={element.p_title}
+        text={element.p_text}
+    />
+))}
 
-Your users should be able to:
+This makes it possible to reuse the same article component for multiple articles.
 
-- View the optimal layout for the site depending on their device's screen size
-- See hover states for all interactive elements on the page
+Responsive Design
 
-### Want some support on the challenge? 
+The layout changes depending on the screen width.
 
-[Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+CSS media queries are used to switch between the mobile and desktop layouts. For example, the mobile navigation is displayed on smaller screens, while the desktop navigation is displayed on larger screens.
 
-## Where to find everything
+The layout also uses Flexbox to arrange the different sections and components.
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+Mobile Navigation
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+The mobile navigation is controlled with React state:
 
-If you would like the Figma design file to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+const [showMenu, setShowMenu] = React.useState(false);
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+When the user opens or closes the navigation, the state changes and React displays the corresponding menu.
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+The navigation uses semantic HTML:
 
-## Using AI coding assistants
+<nav>
+    ...
+</nav>
 
-We've included two files to help you if you're using AI coding assistants (like Claude, GitHub Copilot, Cursor, etc.) while working on this challenge:
+and the navigation links are implemented as actual links instead of non-interactive elements.
 
-- `AGENTS.md` - Contains detailed instructions for AI assistants on how to help you with this challenge. It's tailored to this challenge's difficulty level, so the AI will provide guidance appropriate to your learning stage—offering more support for beginner challenges and encouraging more independence on advanced ones.
-- `CLAUDE.md` - A pointer file that directs Claude-based tools to the AGENTS.md instructions.
+Focus Management
 
-**How to use them:** You don't need to do anything! These files are automatically detected by most AI coding tools. The AI will read them and adjust its behavior to be a better learning partner—guiding you toward solutions rather than just giving you the answers.
+I also implemented focus management for the mobile navigation.
 
-**Note:** These files are designed to help you *learn*, not to do the work for you. The AI is instructed to ask questions, give hints, and explain concepts rather than writing complete solutions.
+When the user closes the mobile menu, the close button is removed from the DOM. Without additional focus management, keyboard users could lose their current focus position.
 
-## Building your project
+A React ref keeps a reference to the open-menu button:
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+const openMenuButtonRef = React.useRef(null);
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+After the menu has been closed, useEffect restores the keyboard focus to the open-menu button.
 
-## Deploying your project
+This improves the experience for users who navigate the page using a keyboard or assistive technologies.
 
-As mentioned above, there are many ways to host your project for free. Our recommended hosts are:
+Accessibility
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+The project uses several accessibility improvements, including:
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://www.frontendmentor.io/guides/hosting-your-solution).
+Semantic <header>, <main>, <nav>, <article>, and <footer> elements
+Real <button> elements for interactive controls
+Real <a> elements for navigation links
+aria-label for the mobile menu buttons
+aria-expanded to communicate the menu state
+aria-controls to connect the menu button with the navigation
+Focus restoration when closing the mobile navigation
+Empty alt attributes for decorative images
+What I Learned
+React state
 
-## Create a custom `README.md`
+I learned how to use React state to control interactive parts of a page. In this project, useState is used to control whether the mobile navigation is open or closed.
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+Component-based development
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+Breaking the page into smaller components helped me understand how React components can be used to structure a larger interface.
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+Instead of putting all markup into one component, I separated the navigation, hero section, benefits section, articles, and footer into different components.
 
-## Submitting your solution
+Responsive layouts
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://www.frontendmentor.io/guides/how-to-submit-solutions) for tips on how to do this.
+I practiced building a layout that works on different screen sizes. I used CSS media queries and Flexbox to change the structure between mobile and desktop layouts.
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+Accessibility and focus management
 
-## Sharing your solution
+One of the most useful things I learned was how keyboard focus behaves when React removes an element from the DOM.
 
-There are multiple places you can share your solution:
+When the mobile navigation is closed, the close button disappears. Using useRef and useEffect, I learned how to restore focus to the button that opens the navigation.
 
-1. Share your solution page in the **#finished-projects** channel of the [community](https://www.frontendmentor.io/community).
-2. Share on [X (formerly Twitter)](https://x.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in your post. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on [LinkedIn](https://www.linkedin.com/company/frontend-mentor/).
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+This helped me better understand that accessibility is not only about semantic HTML, but also about how interactive elements behave during state changes.
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback.
+Reusable styling
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+I also learned to look for repeated CSS declarations and extract common styles into reusable classes. This makes the stylesheet easier to maintain and reduces unnecessary duplication.
 
-## Got feedback for us?
+Continued Development
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+There are several things I would improve in a future version of this project:
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+Improve the naming consistency of component props and data properties.
+Further reduce duplicated CSS rules.
+Improve and standardize hover and focus states for all interactive elements.
+Connect the navigation links to complete page sections or real pages.
+Further improve the accessibility of the navigation and interactive elements.
+Simplify the project structure and potentially move the project to a standard React build setup.
+Add automated accessibility testing to identify issues earlier during development.
+Challenges
 
-**Have fun building!** 🚀
+One of the main challenges was implementing the responsive mobile navigation.
+
+The navigation has two different states: opened and closed. I needed to make sure that the correct button was displayed in each state and that keyboard users could continue navigating after the menu was closed.
+
+Another challenge was keeping the layout close to the original Frontend Mentor design while making it responsive for different screen sizes.
+
+Links
+Live Site: [Add your deployed project URL here]
+Frontend Mentor Challenge: [Add the Frontend Mentor challenge URL here]
+Author
+
+Built as a Frontend Mentor project while practicing React, responsive web development, and web accessibility.
