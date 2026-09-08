@@ -1,7 +1,7 @@
 function UpperDigitalBank({logo_link, icon_link1, icon_link2}){
     const[showMenu, setShowMenu]=React.useState(false);
     return(
-        <article className="upper-digital-bank-part">
+        <header className="upper-digital-bank-part">
           
              <div className="upper-digital-bank-inner-part-mobile">
                <img src={logo_link}  alt="image of logo"/>
@@ -85,6 +85,6 @@ function UpperDigitalBank({logo_link, icon_link1, icon_link2}){
               </button>
            </div> 
          
-        </article>
+        </header>
     )
 }

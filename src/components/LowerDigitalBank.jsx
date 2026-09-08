@@ -1,6 +1,6 @@
 function LowerDigitalBank({logo_link,icon1,icon2,icon3,icon4,icon5}){
     return(
-        <article className="lower-digital-bank-part">
+        <footer className="lower-digital-bank-part">
            <div className="lower-digital-bank-inner-part">
               <div className="lower-bank-inner-part-digi-part">
                  <img src={logo_link}  alt="image of logo"/>
@@ -34,6 +34,6 @@ function LowerDigitalBank({logo_link,icon1,icon2,icon3,icon4,icon5}){
                
            </div> 
          
-        </article>
+        </footer>
     )
 }
