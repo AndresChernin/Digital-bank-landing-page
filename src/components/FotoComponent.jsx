@@ -3,10 +3,10 @@ function FotoComponent({background_foto_mobile,background_foto_desktop, inner_fo
         <article className="foto-part">
             <div className="mobile-hero">
                <div className="foto-part-upper-part">
-                 <img src={background_foto_mobile} className="bg-foto-part"   alt="image of big foto"/>
+                 <img src={background_foto_mobile} className="bg-foto-part"   alt=""/>
            
                
-                 <img src={inner_foto_link} className="inner-foto-part"   alt="image of inner foto"/>
+                 <img src={inner_foto_link} className="inner-foto-part"   alt=""/>
                </div>
             </div>
             <div className="desktop-hero">
