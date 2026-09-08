@@ -46,19 +46,7 @@
     font-weight: 300;
     text-align: center;
 }
-/*.button-container{
-    padding-left:1.5rem;
-    padding-right:1.5rem;
-    padding-top:0.5rem;
-    padding-bottom: 0.5rem;
-    border:none;
-    border-radius: 25px;
-     background: linear-gradient(
-        45deg,
-        hsl(192, 69%, 51%),
-        hsl(136, 64%, 51%)
-    );
-}*/
+
 .request-button {
     padding: 0.5rem 1.5rem;
     border: none;
