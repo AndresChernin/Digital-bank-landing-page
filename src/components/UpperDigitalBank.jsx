@@ -1,5 +1,15 @@
 function UpperDigitalBank({logo_link, icon_link1, icon_link2}){
     const[showMenu, setShowMenu]=React.useState(false);
+    const openMenuButtonRef = React.useRef(null);
+    const wasMenuOpen = React.useRef(false);
+
+    React.useEffect(() => {
+    if (wasMenuOpen.current && !showMenu) {
+        openMenuButtonRef.current?.focus();
+    }
+
+    wasMenuOpen.current = showMenu;
+}, [showMenu]);
     return(
         <header className="upper-digital-bank-part">
           
@@ -8,6 +18,7 @@ function UpperDigitalBank({logo_link, icon_link1, icon_link2}){
              {!showMenu ?
                    (
                    <button 
+                    ref={openMenuButtonRef}
                    type="button"
                    className="open-menu-button"
                    onClick={() => setShowMenu(true)}
