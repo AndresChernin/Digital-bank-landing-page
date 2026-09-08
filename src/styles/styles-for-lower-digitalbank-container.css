@@ -76,6 +76,13 @@
     font-size: 0.813rem;
     font-weight: 400;
 }
+.lower-bank-info-part a{
+    color:white;
+    text-decoration: none;
+}
+.lower-bank-info-part a:hover{
+    color:var(--green-color);
+}
 @media(min-width:700px){
     .lower-digital-bank-part{
       padding-left:5rem;

@@ -12,18 +12,18 @@ function LowerDigitalBank({logo_link,icon1,icon2,icon3,icon4,icon5}){
                   <img src={icon5}  alt="instagram icon"/>
                  </div>
               </div>
-              <div className="lower-bank-info-part">
+              <nav className="lower-bank-info-part">
                   <div className="lower-bank-info-upper-part">
-                   <p>About us</p>
-                   <p>Contact</p>
-                   <p>Blog</p>
+                   <a href="#about">About us</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#blog">Blog</a>
                   </div>
                   <div className="lower-bank-info-lower-part">
-                     <p>Careers</p>
-                     <p>Support</p>
-                     <p>Privacy Policy</p>
+                     <a href="#careers">Careers</a>
+                     <a href="#careers">Support</a>
+                     <a href="#careers">Private Policy</a>
                   </div>
-              </div>
+              </nav>
               <div className="lower-bank-button-part">
                 <button className="request-button">
                   Request Invite   
