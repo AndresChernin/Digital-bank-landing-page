@@ -104,9 +104,13 @@
     align-items: center;
     gap:2rem;
 }
-.menu-part p{
+.menu-part a{
     color:var(--h-color);
-
+    text-decoration: none;
+}
+.menu-part a:hover{
+    color:var(--green-color);
+    
 }
 .upper-request-button {
     padding: 0.5rem 1.5rem;
