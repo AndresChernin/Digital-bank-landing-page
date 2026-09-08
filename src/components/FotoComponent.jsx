@@ -25,9 +25,9 @@ function FotoComponent({background_foto_mobile,background_foto_desktop, inner_fo
                     will be a one-stop-shop for spending, saving, budgeting, 
                     investing, and much more.</p>
 
-                <button className="foto-part-button-part">
-                 <p className="button-part-p">Request Invite</p>
-                </button>
+                 <button className="upper-request-button">
+                      Request Invite
+              </button>
             </div>
            </div>
          
