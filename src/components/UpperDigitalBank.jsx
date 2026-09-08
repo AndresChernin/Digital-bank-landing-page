@@ -42,13 +42,17 @@ function UpperDigitalBank({logo_link, icon_link1, icon_link2}){
               }
              </div>
              {showMenu &&(
-              <div className="menu-part">
-                 <p>Home</p>
-                 <p>About</p>
-                 <p>Contact</p>
-                 <p>Blog</p>
-                 <p>Careers</p>
-               </div>
+              <nav
+    className="menu-part"
+    id="mobile-navigation"
+    aria-label="Main navigation"
+  >
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#blog">Blog</a>
+    <a href="#careers">Careers</a>
+  </nav>
              )}
                
              
