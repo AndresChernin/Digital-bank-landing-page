@@ -70,13 +70,16 @@ function UpperDigitalBank({logo_link, icon_link1, icon_link2}){
            
            <div className="upper-digital-bank-inner-part-desktop">
                <img src={logo_link}  alt="image of logo"/>
-               <div className="upper-digital-bank-info-part">
-                <p>Home</p>
-                <p>About</p>
-                <p>Contact</p>
-                <p>Blog</p>
-                <p>Careeres</p>
-               </div>
+               <nav
+    className="upper-digital-bank-info-part"
+    aria-label="Main navigation"
+>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#blog">Blog</a>
+    <a href="#careers">Careers</a>
+</nav>
                <button className="upper-request-button">
                       Request Invite
               </button>
