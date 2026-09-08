@@ -7,8 +7,13 @@ function UpperDigitalBank({logo_link, icon_link1, icon_link2}){
                <img src={logo_link}  alt="image of logo"/>
              {!showMenu ?
                    (
-                   <button className="open-menu-button"
-                   onClick={()=>setShowMenu(true)}>
+                   <button 
+                   type="button"
+                   className="open-menu-button"
+                   onClick={() => setShowMenu(true)}
+                   aria-label="Open navigation"
+                   aria-expanded={showMenu}
+                   aria-controls="mobile-navigation">
                      <span className="open-menu-icon"
                        style={{
                               maskImage: `url(${icon_link1})`,
@@ -23,8 +28,14 @@ function UpperDigitalBank({logo_link, icon_link1, icon_link2}){
                         />*/}
                     </button>   
                    ):
-                   (<button className="close-menu-button"
-                     onClick={()=>setShowMenu(false)}>
+                   (<button
+                      type="button"
+                      className="close-menu-button"
+                      onClick={() => setShowMenu(false)}
+                      aria-label="Close navigation"
+                      aria-expanded={showMenu}
+                      aria-controls="mobile-navigation"
+                    >
                       <span className="close-menu-icon"
                        style={{
                               maskImage: `url(${icon_link2})`,
